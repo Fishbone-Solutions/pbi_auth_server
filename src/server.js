@@ -17,7 +17,7 @@ app.use('/js', express.static('./node_modules/powerbi-client/dist/')) // Redirec
 app.use('/css', express.static('./node_modules/bootstrap/dist/css/')); // Redirect CSS bootstrap
 app.use('/public', express.static('./public/')); // Use custom JS and CSS files
 
-const port = process.env.PORT || 5300;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
