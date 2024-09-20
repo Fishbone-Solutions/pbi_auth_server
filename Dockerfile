@@ -2,10 +2,10 @@
 FROM node:lts-alpine3.18@sha256:c41b5bfd0ef6f2db8f50323ce5ffb39f4ad444b5e5796c819ba4b1b799fbfdc2 AS build
 WORKDIR /usr/src/
 COPY ./src /usr/src/
-COPY ./config /usr/src/config
-COPY ./models /usr/src/models
-COPY ./views /usr/src/views
-COPY ./public /usr/src/public
+COPY ./config /usr/config
+COPY ./models /usr/models
+COPY ./views /usr/views
+COPY ./public /usr/public
 
 RUN apk update && apk upgrade && apk add --no-cache git \
     && npm install --production && npm cache clean --force \
